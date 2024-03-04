@@ -21,12 +21,12 @@ public class CityController {
     }
 
     @PostMapping("/register")
-    public City insert(City city){
+    public City insert(@RequestBody City city){
         return cityService.insert(city);
     }
 
     @PutMapping("/update")
-    public City update(City city){
+    public City update(@RequestBody City city){
         return cityService.update(city);
     }
 

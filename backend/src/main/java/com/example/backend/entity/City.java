@@ -1,15 +1,19 @@
 package com.example.backend.entity;
 
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Temporal;
-import jakarta.persistence.TemporalType;
+import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.Date;
 
+@Entity
+@Table(name="city")
+@Data
 public class City {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String name;
 
     @ManyToOne
