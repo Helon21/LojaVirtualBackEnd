@@ -28,7 +28,6 @@ public class StateService {
 
     public State update(State state){
         state.setUpdateDate(new Date());
-        stateRepository.saveAndFlush(state);
         return stateRepository.saveAndFlush(state);
     }
 
