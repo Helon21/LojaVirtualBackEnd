@@ -21,12 +21,12 @@ public class ProductController {
     }
 
     @PostMapping("/register")
-    public Product insert(Product product){
+    public Product insert(@RequestBody Product product){
         return productService.insert(product);
     }
 
     @PutMapping("/update")
-    public Product update(Product product){
+    public Product update(@RequestBody Product product){
         return productService.update(product);
     }
 

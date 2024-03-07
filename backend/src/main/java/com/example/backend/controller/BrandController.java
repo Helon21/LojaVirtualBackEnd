@@ -21,12 +21,12 @@ public class BrandController {
     }
 
     @PostMapping("/register")
-    public Brand insert(Brand brand){
+    public Brand insert(@RequestBody Brand brand){
         return brandService.insert(brand);
     }
 
     @PutMapping("/update")
-    public Brand update(Brand brand){
+    public Brand update(@RequestBody Brand brand){
         return brandService.update(brand);
     }
 

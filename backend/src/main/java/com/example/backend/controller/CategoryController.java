@@ -5,6 +5,7 @@ import com.example.backend.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,11 +22,11 @@ public class CategoryController {
         return categoryService.findAll();
     }
 
-    public Category insert(Category category){
+    public Category insert(@RequestBody Category category){
         return categoryService.insert(category);
     }
 
-    public Category update(Category category){
+    public Category update(@RequestBody Category category){
         return categoryService.update(category);
     }
 
